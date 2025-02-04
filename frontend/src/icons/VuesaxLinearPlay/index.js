@@ -1,0 +1,1 @@
+export { VuesaxLinearPlay } from "./VuesaxLinearPlay";

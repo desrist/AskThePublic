@@ -1,0 +1,63 @@
+include:
+  - local: '.gitlab-ci-deploy.yml'
+
+stages:
+  - scraping
+  - processing
+  - visualization
+  - deploy
+
+variables:
+  TZ: "Europe/Zurich"
+
+cache:
+  key: pip-cache
+  paths:
+    - src/scraping/ScrapingWithPDF/.venv/
+
+before_script:
+  - ln -sf /usr/share/zoneinfo/Europe/Zurich /etc/localtime
+  - dpkg-reconfigure -f noninteractive tzdata
+  - python -m pip install --upgrade pip
+  - cd src/scraping/ScrapingWithPDF
+  - python -m venv .venv
+  - source .venv/bin/activate
+  - pip install -r requirements.txt
+  - cd ../../..
+
+scraping_metadata:
+  stage: scraping
+  image: python:3.11.8
+  only:
+    - schedules
+  script:
+    - source src/scraping/ScrapingWithPDF/.venv/bin/activate
+    - python src/scraping/ScrapingWithPDF/1_scrapingMetadata.py
+  variables:
+    ATLAS_USER: "$ATLAS_USER"
+    ATLAS_TOKEN: "$ATLAS_TOKEN"
+
+feedback_processing:
+  stage: processing
+  image: python:3.11.8
+  only:
+    - schedules
+  script:
+    - source src/scraping/ScrapingWithPDF/.venv/bin/activate
+    - python src/scraping/ScrapingWithPDF/2_preprocessingMetadata.py
+  variables:
+    ATLAS_USER: "$ATLAS_USER"
+    ATLAS_TOKEN: "$ATLAS_TOKEN"
+    OPENAI_API_KEY: "$OPENAI_API_KEY"
+
+initiative_info:
+  stage: visualization
+  image: python:3.11.8
+  only:
+    - schedules
+  script:
+    - source src/scraping/ScrapingWithPDF/.venv/bin/activate
+    - python src/scraping/ScrapingWithPDF/3_dataVisualization.py
+  variables:
+    ATLAS_USER: "$ATLAS_USER"
+    ATLAS_TOKEN: "$ATLAS_TOKEN"

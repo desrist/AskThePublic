@@ -1,0 +1,1 @@
+export {OutlineArrowCircleUp} from './OutlineArrowCircleUp';

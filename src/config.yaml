@@ -1,0 +1,42 @@
+topics:
+- AGRI
+- FINANCE
+- BUDGET
+- BUSINESS
+- CLIMA
+- COMP
+- CONSUM
+- CULT
+- CUSTOMS
+- DIGITAL
+- ECFIN
+- EAC
+- EMPL
+- ENER
+- ENV
+- ENLARG
+- NEIGHBOUR
+- FOOD
+- FOREIGN
+- FRAUD
+- HOME
+- HUMAN
+- INST
+- INTDEV
+- JUST
+- MARE
+- ASYL
+- HEALTH
+- REGIO
+- RESEARCH
+- SINGMARK
+- SPORT
+- STAT
+- TAX
+- TRADE
+- TRANSPORT
+- YOUTH
+urls:
+  initiatives_id: "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?"
+  publication_id: 'https://ec.europa.eu/info/law/better-regulation/brpapi/groupInitiatives/'
+  feedback_info: "https://ec.europa.eu/info/law/better-regulation/api/allFeedback?publicationId={}&keywords=&language=EN&page={}&size=10&sort=dateFeedback,DESC"

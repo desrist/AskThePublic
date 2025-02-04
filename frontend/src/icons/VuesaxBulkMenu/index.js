@@ -1,0 +1,1 @@
+export { VuesaxBulkMenu } from "./VuesaxBulkMenu";

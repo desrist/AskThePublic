@@ -1,0 +1,38 @@
+name: Manually update data Job
+
+on:
+  workflow_dispatch:
+
+jobs:
+  scraping_and_processing:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Install Python env
+      - name: Set up Python 3.11.8
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11.8'
+
+      # Install Python dependencies
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          cd src/scraping/ScrapingWithPDF
+          pip install -r requirements.txt
+
+      # Step: Run the second script (processing and embedding)
+      - name: Run feedback processing script
+        env:
+          ATLAS_USER: ${{ secrets.ATLAS_USER }}
+          ATLAS_TOKEN: ${{ secrets.ATLAS_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          cd src/scraping/ScrapingWithPDF
+          python 2_preprocessingMetadata.py
+
+          

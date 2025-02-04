@@ -1,0 +1,1 @@
+export { VuesaxLinearFlash } from "./VuesaxLinearFlash";

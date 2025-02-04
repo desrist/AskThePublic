@@ -1,0 +1,109 @@
+:root {
+  --subtitle-1-font-family: "Anonymous Pro", Helvetica;
+  --subtitle-1-font-size: 20px;
+  --subtitle-1-font-style: normal;
+  --subtitle-1-font-weight: 400;
+  --subtitle-1-letter-spacing: 0px;
+  --subtitle-1-line-height: normal;
+  --text-1-font-family: "Anonymous Pro", Helvetica;
+  --text-1-font-size: 16px;
+  --text-1-font-style: normal;
+  --text-1-font-weight: 400;
+  --text-1-letter-spacing: 0px;
+  --text-1-line-height: normal;
+  --title-1-font-family: "Anonymous Pro", Helvetica;
+  --title-1-font-size: 48px;
+  --title-1-font-style: normal;
+  --title-1-font-weight: 700;
+  --title-1-letter-spacing: 0px;
+  --title-1-line-height: normal;
+  --white-100: rgba(255, 255, 255, 1);
+  --white-32: rgba(255, 255, 255, 0.32);
+  --white-36: rgba(255, 255, 255, 0.36);
+  --white-6: rgba(255, 255, 255, 0.06);
+  --white-12: rgba(255, 255, 255, 0.12);
+  --white-64: rgba(255, 255, 255, 0.64);
+  --white-48: rgba(255, 255, 255, 0.48);
+  --white-40: rgba(255, 255, 255, 0.40);
+  --black: rgba(43, 44, 51, 1);
+  --black-2: rgb(73, 76, 95);
+  --gray-1: rgba(81, 81, 81, 1);
+
+  /* Google-like Fonts */
+  --font-family-main: "Roboto", "Arial", sans-serif;
+  --font-family-secondary: "Roboto Mono", "Courier New", monospace;
+  --font-family-third: 'Open Sans', sans-serif;
+  --font-family-forth: 'Lato', sans-serif;
+  --font-family-fifth: 'Montserrat', sans-serif;
+  --font-family-sixth: 'Playfair Display', serif;
+  --font-family-gpt: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Typography for various elements */
+  --headline-font-size: 52px;
+  --headline-font-weight: 700;
+  --headline-line-height: 1.6;
+
+  --subtitle-font-size: 22px;
+  --subtitle-font-weight: 600;
+  --subtitle-line-height: 1.4;
+
+  --body-font-size: 18px;
+  --body-font-weight: 500;
+  --body-line-height: 1.6;
+
+  --caption-font-size: 16px;
+  --caption-font-weight: 400;
+  --caption-line-height: 1;
+
+  /* Google-like Colors */
+  --color-primary: #4285f4; /* Google Blue */
+  --color-primary-dark: #357ae8;
+  --color-secondary: #fbbc05; /* Google Yellow */
+  --color-secondary-dark: #e4a800;
+  --color-success: #34a853; /* Google Green */
+  --color-danger: #ea4335; /* Google Red */
+
+  /* Neutral Colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-dark-blue: #023564;
+  --color-black-light: #766b6b;
+  --color-gray-100: #f1f3f4;
+  --color-gray-200: #e0e0e0;
+  --color-gray-300: #c1c1c1;
+  --color-gray-500: #9e9e9e;
+  --color-gray-700: #616161;
+  --color-gray-800: #494848;
+
+  /* Shadows */
+  --box-shadow-sm: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+  --box-shadow-md: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+  --box-shadow-lg: 0px 0px 40px rgba(0, 0, 0, 0.19), 0px 10px 10px rgba(0, 0, 0, 0.23);
+
+  /* Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+
+  /* Spacing */
+  --spacing-xxs: 2px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Z-index */
+  --z-index-dropdown: 1000;
+  --z-index-modal: 1050;
+  --z-index-tooltip: 1070;
+
+  /* Hover Effects */
+  --hover-opacity: 0.08;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+
+}

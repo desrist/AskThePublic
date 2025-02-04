@@ -1,0 +1,59 @@
+.title {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 670px;
+}
+
+.title .title-text {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  flex: 1;
+  font-family: var(--font-family-forth);
+  font-size: var(--headline-font-size);
+  font-weight: var(--headline-font-weight);
+  line-height: var(--title-1-line-height);
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+}
+
+
+.title .default {
+  background: linear-gradient(
+    180deg,
+    rgb(85, 109, 255) 15.87%,
+    rgb(100, 167, 255) 60.65%,
+    rgba(197, 0, 197, 0.75) 89.14%
+  );
+}
+
+.title .variant-3 {
+  background: linear-gradient(
+    180deg,
+    rgb(255, 150, 120) 15.87%,
+    rgb(180, 100, 230) 60.65%,
+    rgb(120, 130, 255) 89.14% 
+  );
+}
+
+.title .variant-4 {
+  background: linear-gradient(
+    180deg,
+    rgb(120, 130, 255) 7.99%,
+    rgb(180, 100, 230) 60.65%,
+    rgb(255, 150, 120) 95.3% 
+  );
+}
+
+.title .variant-2 {
+  background: linear-gradient(
+    180deg,
+    rgb(120, 130, 255) 7.99%,
+    rgb(180, 100, 230) 60.65%,
+    rgb(255, 150, 120) 95.3%
+  );
+}
